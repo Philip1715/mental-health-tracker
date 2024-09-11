@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-kmw&b%tiizumkzy7)tq7)t$y!$82_ssc7f-5n8$*b0c!p#gaz$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "philip-halomoan-mentalhealthtracker.pbp.cs.ui.sc.id"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "philip-halomoan-mentalhealthtracker2.pbp.cs.ui.ac.id"]
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mental_health_tracker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'], # Tambahkan konten baris ini
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,3 +122,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = ["http://localhost","http://127.0.0.1","http://philip-halomoan-mentalhealthtracker2.pbp.cs.ui.ac.id", "https://philip-halomoan-mentalhealthtracker2.pbp.cs.ui.ac.id"]

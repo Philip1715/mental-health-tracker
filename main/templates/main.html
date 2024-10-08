@@ -199,5 +199,9 @@ const modal = document.getElementById('crudModal');
   document.getElementById("cancelButton").addEventListener("click", hideModal);
   document.getElementById("closeModalBtn").addEventListener("click", hideModal);
   document.getElementById("submitMoodEntry").onclick = addMoodEntry
+  document.getElementById("moodEntryForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    addMoodEntry();
+  })
 </script>
 {% endblock content %}
